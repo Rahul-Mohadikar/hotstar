@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: hotstar-service
+spec:
+  selector:
+    app: hotstar
+  ports:
+  - protocol: TCP
+  - port: 80
+    targetPort: 3000
+  type: LoadBalancer
