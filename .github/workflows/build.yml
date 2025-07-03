@@ -48,16 +48,7 @@ jobs:
 
       - name: update update-kubeconfig
         run: aws eks --region us-east-1 update-kubeconfig --name EKS_CLOUD
-
-      - name: working directory
-        run: pwd
-
-      - name: change directory
-        run: cd /home/ubuntu/actions-runner/hotstar
-
-      - name: list
-        run: ls -la
-
+        
       - name: deploy to kubernetes
         run: kubectl apply -f deployment-service.yml
 
