@@ -52,11 +52,11 @@ jobs:
       - name: working directory
         run: pwd
 
-      - name: list 
-        run: ls -al
+      - name: change directory
+        run: cd /home/ubuntu/actions-runner/hotstar
 
       - name: deploy to kubernetes
-        run: kubectl apply -f k8s/deployment-service.yml
+        run: kubectl apply -f /deployment-service.yml
 
       
 
