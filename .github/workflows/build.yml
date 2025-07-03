@@ -33,7 +33,6 @@ jobs:
           docker tag hotstar rahul70/hotstar:latest
           login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_TOKEN}}
           docker push rahul70/hotstar:latest
-
   deploy:
     needs: build-analyze-scan
     runs-on: [self-hosted]
@@ -53,5 +52,7 @@ jobs:
       - name: deploy service
         run: kubectl apply -f service.yml
 
+
+ 
     
       
