@@ -33,6 +33,9 @@ jobs:
           docker tag hotstar rahul70/hotstar:latest
           login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_TOKEN}}
           docker push rahul70/hotstar:latest
+        env:
+          DOCKER_CLI_ACI: 1
+
   deploy:
     needs: build-analyze-scan
     runs-on: [self-hosted]
