@@ -50,10 +50,10 @@ jobs:
         run: aws eks --region us-east-1 update-kubeconfig --name EKS_CLOUD
 
       - name: deploy to kubernetes
-        run: kubectl apply -f deployment.yml
+        run: kubectl apply -f K8S/deployment.yml
 
       - name: deploy service
-        run: kubectl apply -f service.yml
+        run: kubectl apply -f K8S/service.yml
 
 
  
