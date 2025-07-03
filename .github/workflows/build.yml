@@ -52,7 +52,6 @@ jobs:
       - name: working directory
         run: |
           pwd
-          cd hotstar
           ls
 
       - name: deploy to kubernetes
