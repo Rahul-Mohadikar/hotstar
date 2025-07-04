@@ -16,4 +16,4 @@ spec:
       - name: hotstar
         image: rahul70/hotstar:latest
         ports:
-        - containerPort: 3000 
+        - containerPort: 3001 
