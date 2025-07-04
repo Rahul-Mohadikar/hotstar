@@ -42,7 +42,7 @@ jobs:
         run: docker pull rahul70/hotstar:latest
 
       - name: deploy to container
-        run: docker run -d --name hotstar -p 3000:3000 rahul70/hotstar:latest
+        run: docker run -d --name hotstar -p 3001:3001 rahul70/hotstar:latest
 
       - name: update kubeconfig
         run: aws eks --region us-east-1 update-kubeconfig --name EKS_CLOUD
